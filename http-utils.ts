@@ -54,7 +54,7 @@ export function request(method: string, url: string, header: Optional<Header>, b
                 });
             });
         });
-        req.on("error", reject);
+        req.on("error", e => reject(e.message));
         if (body.is_present()) {
             body.map(body => {
                 req.write(body);
