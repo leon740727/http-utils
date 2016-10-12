@@ -28,7 +28,7 @@ export class Url {
 
 export type Header = {[field: string]: string};
 
-type Response = {
+export type Response = {
     statusCode: number,
     header: Header,
     content: Buffer
